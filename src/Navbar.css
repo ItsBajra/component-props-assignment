@@ -1,0 +1,91 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navbar-logo {
+    font-size: 24px;
+    font-family: 'Arial Black', sans-serif;
+    color: #ff6347;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ff6347;
+  }
+  
+  .mobile-menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+    }
+  
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(51, 51, 51, 0.95);
+      transform: translateY(-100%);
+      transition: transform 0.5s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .mobile-menu.show {
+      transform: translateY(0);
+    }
+  
+    .mobile-nav-links {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+    }
+  
+    .mobile-nav-link {
+      text-decoration: none;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      margin: 15px 0;
+      display: block;
+      transition: color 0.3s ease;
+    }
+  
+    .mobile-nav-link:hover {
+      color: #ff6347;
+    }
+  }
+  
